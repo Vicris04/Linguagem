@@ -53,13 +53,14 @@ void q4() {
     printf("Digite o segundo número: \n")
     scanf("%f", &num2)
     printf("Os númeroa são: %.2f %2.f" , num, num2 \n);
+}
 //6. Faça um programa que leia um número inteiro e imprima o seu
 //   antecessor e o seu sucessor.
     float num;
     printf("Digite um número:");
     scanf("%f",&num);
     printf("Antecessor: %f e Sucessor: %f", n-1,n+1);
-
+}
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
     char nome[30], telefone[14], endereco[30];
@@ -70,11 +71,18 @@ void q4() {
     printf("Digite seu endereço: \n");
         scanf(" %30[^\n]", endereço);
     printf("%s\n %s\n %s\n" , nome, telefone, endereco);
-    
+}
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
-
-//9. Faça um programa que leia umnúmero real e imprima ¼ deste número.
+int n1, n2, subtracao;
+printf("Digite o primeiro número:\n");
+    scanf("%d" , &n1);
+printf("Digite o Segundo número:\n");
+    scanf("%d" , &n2);
+        subtracao = n1 - n2;
+printf("Resultado: %d" , subtracao);
+}
+//9. Faça um programa que leia um número real e imprima ¼ deste número.
 
 //10. Faça um programa que leia três números reais e calcule a
 //    média aritmética destes números. Ao final, o programa deve
