@@ -50,17 +50,23 @@ printf("Não é multiplo de 3");
 void questao04() {
 int num;
 printf("Digite o número:\n");
-    scanf("%d, &num");
+    scanf("%d", &num);
 if ((num % 5) == 0)
 printf("E divisivel por 5");
 else
-se
 printf("Nao e divisivel por 5");
 }
 
 //5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 void questao05() {
-
+int num = 0;
+	printf("Digite um número inteiro: ");
+	scanf("%d", &num);
+	if (num % 3 == 0 && num % 7 == 0) {
+		printf("%d é múltiplo de 3 e 7\n", num);
+	} else {
+		printf("%d NÃO é múltiplo de 3 e 7\n", num);		
+	}
 }
 
 //6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
@@ -68,26 +74,58 @@ void questao05() {
 //bruto. Faça um programa em linguagem C que permita entrar com o salário bruto e o
 //valor da prestação e informar se o empréstimo pode ou não ser concedido.
 void questao06() {
-
+int sal, pres;
+printf("Salário Bruto:");
+    scanf("%d", &sal);
+printf("Valor da prestação:");
+    scanf("%d" , &pres);
+        if(pres <= (sal*0.3))
+            printf("Empréstimo permitido");
+            printf("Empréstimo não permitido");
 }
 
 //7. Faça um programa que leia um número e indique se o número está compreendido
 //entre 20 e 50 ou não.
 void questao07() {
-
+int n;
+printf("Digite um número:\n");
+scanf("%d" , &n);
+if (n >= 20 && n <= 50){
+    printf("O número encontra-se entre 20 e 50"); 
+} else{
+    printf("O número não encontra-se entre 20 e 50");
+}
 }
 
 //8. Faça um programa que leia um número e imprima uma das mensagens: 
 //"Maior do que 20", "Igual a 20"ou "Menor do que 20".
 void questao08() {
-	
+int n;
+printf("Digite um número\n");
+scanf("%d" , &n);
+if(n > 20 ){
+    printf("Número maior que 20");
+}else {
+    if (n == 20){
+        printf("Número igual a 20");
+    }else{
+        printf("Número menor que 20");
+    }
 }
-
+}
 //9. Faça um programa que permita entrar com o ano de nascimento da pessoa e como ano
 //atual. O programa deve imprimir a idade da pessoa. Não se esqueça de verificar se o
 //ano de nascimento informado é válido.
 void questao09() {
-	
+int na, aa;
+printf("Digite seu ano de nascimento:\n");
+scanf("%d" , &na);
+printf("Digite o ano atual:\n");
+scanf("%d" , &aa);
+if(na > 0 && na <= aa){
+    printf("Sua idade: %d" , aa - na);
+}else
+printf("Data de nacimento inválida\n");
 }
 
 //10. Faça um programa que leia três números inteiros e imprima os três em ordem
@@ -214,4 +252,93 @@ void questao24() {
 //0,5 1º, 2º e 3º grupos
 void questao25() {
 	
+}
+
+int main() {
+	const char menu[1000] = "\n================================\n            PROGRAMAS\n================================\n[1]  - Adição\n[2]  - Adição 2\n[3]  - Múltiplo\n[4]  - Múltiplo 2\n[5]  - Múltiplo 3\n[6]  - Crédito\n[7]  - Intervalo\n[8]  - Menor/Maior\n[9]  - Idade\n[10] - Crescente\n[11] - Maior\n[12] - Idade 2\n[13] - Situação Aluno\n[14] - INSS\n[15] - Valor de Venda\n[16] - Natação\n[17] - Plano de Saúde\n[18] - Mês do Ano\n[19] - Arco e Flecha\n[20] - Crédito Especial\n[21] - Biblioteca\n[22] - Consumo Combustível\n[23] - Calorias\n[24] - Emplacamento\n[25] - Intimação\n================================\n";
+	printf("%s",menu);
+	int opcao;
+	printf("Digite a questão a ser executada: ");
+	scanf("%d", &opcao);
+	switch (opcao) {
+		case 1:
+			questao01();
+			break;
+		case 2:
+			questao02();
+			break;
+		case 3:
+			questao03();
+			break;
+		case 4:
+			questao04();
+			break;
+		case 5:
+			questao05();
+			break;	
+		case 6:
+			questao06();
+			break;	
+		case 7:
+			questao07();
+			break;					
+		case 8:
+			questao08();
+			break;
+		case 9:
+			questao09();
+			break;
+		case 10:
+			questao10();
+			break;
+		case 11:
+			questao11();
+			break;
+		case 12:
+			questao12();
+			break;
+		case 13:
+			questao13();
+			break;	
+		case 14:
+			questao14();
+			break;	
+		case 15:
+			questao15();
+			break;					
+		case 16:
+			questao16();
+			break;
+        case 17:
+			questao17();
+			break;
+		case 18:
+			questao18();
+			break;
+		case 19:
+			questao19();
+			break;
+		case 20:
+			questao20();
+			break;
+		case 21:
+			questao21();
+			break;	
+		case 22:
+			questao22();
+			break;	
+		case 23:
+			questao23();
+			break;					
+		case 24:
+			questao24();
+			break;
+		case 25:
+			questao25();
+			break;
+		default:
+			printf("Opção inválida!");
+	}
+	
+	return EXIT_SUCCESS;
 }
