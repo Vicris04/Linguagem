@@ -131,20 +131,64 @@ printf("Data de nacimento inválida\n");
 //10. Faça um programa que leia três números inteiros e imprima os três em ordem
 //crescente.
 void questao10() {
-
+int n1, n2, n3;
+printf("Digite Três Números:\n");
+scanf("%d" , &n1);
+scanf("%d" , &n2);
+scanf("%d" , &n3);
+if(n1 < n2 && n1 < n3) {
+	if(n2 < n3)
+		printf("%d , %d, %d", n1, n2 , n3);
+	else
+		printf("%d , %d , %d" , n1 , n3 , n2);
+}
+else
+if (n2 < n1 && n2 < n3) {
+if(n1 < n3)
+	printf("%d , %d , %d" , n2 , n1 , n3);
+else
+	printf("%d , %d , %d" , n2 , n3 , n1);
+}
+else {
+if(n2 < n1)
+	printf("%d , %d , %d" , n3 , n2 , n1);
+else
+	printf("%d , %d , %d" , n3 , n1 , n2);
+}
 }
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
 void questao11() {
-	
+int n1, n2, n3;
+	printf("Digite Três Números:\n");
+		scanf("%d" , &n1);
+		scanf("%d" , &n2);
+		scanf("%d" , &n3);
+if(n1 < n2 && n1 < n3) {
+	printf("Maior número: %d", n1);
 }
-
+else if(n2 > n1 && n2 >n3){
+		printf("Maior número: %d", n2);
+}
+else{
+	printf("Maior número: %d",n3);
+}
+}
 //12. Faça um programa que leia a idade de uma pessoa e informe:
 //• Se é maior de idade
 //• Se é menor de idade
 //• Se é maior de 65 anos
 void questao12() {
-	
+int id;
+printf("Qual a sua idade? \n");
+scanf("%d" , &id);
+	if(idade >= 18)
+		printf("Maior de idade");
+else
+	if( idade >= 65)
+		printf("Maior de 65");
+else
+		printf("Menor de idade");
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
