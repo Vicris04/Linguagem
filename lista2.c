@@ -182,19 +182,39 @@ void questao12() {
 int id;
 printf("Qual a sua idade? \n");
 scanf("%d" , &id);
-	if(idade >= 18)
+	if(id >= 18)
 		printf("Maior de idade");
 else
-	if( idade >= 65)
+	if( id >= 65)
 		printf("Maior de 65");
 else
 		printf("Menor de idade");
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
-//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
+//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2,
+//a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"
+//(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
-	
+char nome[20];
+float p1, p2, m;
+
+printf("Nome do aluno:\n");
+	scanf("%20[^\n]", nome);
+printf("Nota da P1 e P2:\n");
+	scanf("%f", &p1);
+	scanf("%f", &p2);
+m = (p1 + p2) / 2;
+printf("Dados \n");
+printf("Aluno: %s \n" , nome);
+printf("Notas - P1: %f P2: %f" , p1 , p2);
+printf("media: %f" , m);
+if (m >= 7)
+	printf("APROVADO");
+else if(m >= 3)
+	printf("PROVA FINAL");
+else
+	printf("REPROVADO");
 }
 
 //14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
@@ -205,7 +225,12 @@ void questao13() {
 //Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 //Maior que R$2000,00 30%
 void questao14() {
-	
+int salario;
+
+printf("Qual seu salário: \n");
+scanf("%d" , salario);
+if (salario < = 600)
+
 }
 
 //15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
