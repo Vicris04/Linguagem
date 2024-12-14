@@ -45,15 +45,22 @@ void exemploPrimeiroMilhao() {
 
 //1.Faça um programa que imprima todos os números de 1 até 100.
 void questao01() {
-	
+	for (int cont = 1; cont <= 100; cont++) {
+		printf("Numero %d \n", cont);
+	}
 }
 //2. Faça um programa que imprima todos os números pares de 100 até 1.
 void questao02() {
-	
+for(int cont = 100; cont <= 1; cont--) {
+	if(cont%2 == 0)
+printf("%d \n" , cont);
+}	
 }
 //3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
   void questao03() {
-	
+	for (int cont = 1; cont <= 500; cont++) {
+		
+	}
 }      
 //4. Faça um programa que permita entrar com o nome, a idade e o sexo de 20
 //pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
@@ -438,29 +445,18 @@ int main() {
 		case 25:
 			questao25();
 			break;
-		default:
-			printf("Opção inválida!");
-            case 26:
+		case 26:
 			questao26();
 			break;
-		default:
-			printf("Opção inválida!");
-            case 27:
+        case 27:
 			questao27();
-			break;
-		default:
-			printf("Opção inválida!");
-            case 28:
+        case 28:
 			questao28();
 			break;
-		default:
-			printf("Opção inválida!");
-            case 29:
+		case 29:
 			questao29();
 			break;
-		default:
-			printf("Opção inválida!");
-            case 30:
+        case 30:
 			questao30();
 			break;
 		default:
